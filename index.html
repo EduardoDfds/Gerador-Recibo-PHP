@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador Recibo Simples</title>
+    <style >
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="funcoes.php" method="post">
+
+        <div id="container" class="bordaRecibo">
+           <h1 id="tituloPrincipal">Recibo Simples</h1>
+           <div id="conteudoRecibo">
+                <div id="pagador">
+                    <h3 >Nome do pagador:</h3>
+                    <input type="text" name="nomeInput" id="nomePagador" placeholder="Nome">
+                </div>
+                <div id="cpfCnpj">
+                    <h3 >CPF/CNPJ (opcional):</h3>
+                    <input type="text" name="cpfInput" id="cpfCnpjPagador" placeholder= "CPF/CNPJ";>
+                    <p class="somenteNumeros">Somente números</p>
+                </div>
+                <div id="valor">
+                    <h3>Valor:</h3>
+                    <input type="float" name="valorInput" id="valorInput" placeholder="00,00">
+                </div>
+                <div id="referencia">
+                    <h3>Pagamento referente á:</h3>
+                    <input type="text" name="referenciaInput" id="referente">
+                </div>
+                <div id="cidadeData">
+                    <div id="cidade" class="displayDiv">
+                        <h3>Cidade:</h3>
+                        <input type="text" name="cidadeinput" id="cidadeInput" >
+                    </div>
+                    <div id="data" class="displayDiv">
+                        <h3>Data:</h3>
+                        <input type="date" name="dataInput" id="dataInput" placeholder="datetime">
+                    </div>
+                </div>
+                <div id="nomeDocEmissor">
+                   <div id="nomeEmissor" class="displayDiv">
+                    <h3>Nome do emissor:</h3>
+                    <input type="text" name="nomeEmissorInput" id="nomeDoEmissor">
+                   </div>
+                   <div id="cpfCnpjEmissor" class="displayDiv">
+                    <h3>CPF/CNPJ (opcional):</h3>
+                    <input type="text" name="cpfEmissorInput" id="cpfEmissor">
+                   </div>
+                   <p class="somenteNumeros" id="numerosCpf">Somente numeros</p>
+                </div>
+                <div id="telefoneEmissor">
+                    <h3>Telefone: (opcional)</h3>
+                    <input type="text" name="telefoneInput" id="telefone ">
+                </div>
+                <div id="formasPagamento">
+                    <h3>Formas de Pagamento:</h3>
+                    <label class="radio">
+                        <input type="radio" name="pagamento" value="dinheiro" checked>
+                        Dinheiro
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="pagamento" value="pix">
+                        Pix
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="pagamento" value="cheque" >
+                        Cheque
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="pagamento" value="trasferencia">
+                        Trâsferencia/Depósito
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="pagamento" value="cartao">
+                        Cartão crédito/Débito
+                    </label>
+                </div>
+                <br>
+                <div id="duasVias">
+                    <h3>Duas vias?</h3>
+                    <input type="checkbox">
+                    Sim
+                </div>
+                <div class="button">
+                    <p>
+                        <input type="hidden" name="gerarRecibo">
+                        <button type="submit" class="submit" onclick="imprimir()">
+                            <span>Gerar Recibo</span>
+                        </button>
+                    </p>
+                </div>
+           </div>  
+        </div>
+        
+    </form>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+h1{
+    text-align: center;
+}
+
+.bordaRecibo {
+    border: 1px solid black;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+#conteudoRecibo{
+    padding: 10px 20px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.somenteNumeros{
+    display: block;
+    font-size: .75rem;
+    margin-top: 0.25rem;
+}
+.displayDiv{
+    display: inline-block;
+}
+#numerosCpf{
+    padding-left: 181px;
+}
+.submit{
+    background-color: rgb(76, 136, 228);
+}
+span{
+    font-weight: 100;
+    color: white;
+    font-size: large;
+}
+
+#valorPago{
+    border: 1px solid #333;
+    padding: 4px 10px; 
+}
+#labelPreco{   
+    padding-left: 500px;
+}
+#labelPrimeiraVia{
+    padding: 10px 20px;
+}
+.menssagem{
+    padding: -0px 20px;
+}
+
